@@ -1,0 +1,14 @@
+# Buildspec run in the build stage of your pipeline.
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      docker: 18
+      golang: 1.13
+      nodejs: 10
+      ruby: 2.6
+    commands:
+      - echo $PIPELINE_STAGE
+  build:
+    commands:
+      - ls -lah
